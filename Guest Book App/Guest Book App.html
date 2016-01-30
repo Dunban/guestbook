@@ -1,0 +1,31 @@
+<head>
+  <title>Guest Book App</title>
+</head>
+
+<body>
+  <h1>Welcome to Scott's guestbook</h1>
+  
+  {{> guestbook}}
+</body>
+
+<template name="guestbook">
+    <div class='col-xs-3'>
+      <form>
+        <div claas="form-group">
+          <label>Name:</label>
+          <input type="text" name="name">
+        </div>
+        
+        <div claas="form-group">
+          <label>Message:</label>
+          <textarea name="message"></textarea>
+        </div>
+        
+        <button type="submit" " class="btn btn-primary">Post!</button>
+      </form>
+      
+      {{#each messages}}
+        <p><strong>{{name}}</strong>: {{message}}</p>
+      {{/each}}
+      </div>
+</template>
