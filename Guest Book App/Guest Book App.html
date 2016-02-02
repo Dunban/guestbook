@@ -22,7 +22,7 @@
     </form>
     
     {{#each messages}}
-      <p><strong>{{name}}</strong>: {{message}}</p>
+      <p><a href="{{pathFor route='message.show'}}"><strong>{{name}}</strong></a>: {{message}}</p>
     {{/each}}
 </template>
 

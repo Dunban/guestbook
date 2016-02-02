@@ -22,6 +22,9 @@ Router.route('/message/:_id', function()
     }
   });
   this.layout('layout')
+},
+{
+  name: 'message.show'
 });
 
 if (Meteor.isClient)
