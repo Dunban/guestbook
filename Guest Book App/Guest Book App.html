@@ -8,7 +8,6 @@
   {{> guestbook}}
 </body>
 
-<<<<<<< HEAD
 <template name="guestbook">
     <div class='col-xs-3'>
       <form>
@@ -30,9 +29,9 @@
       {{/each}}
       </div>
 </template>
-=======
-<div class='col-xs-3'>
-  <template name="guestbook">
+
+<template name="guestbook">
+  <div class='col-xs-3'>
     <form>
       <div claas="form-group">
         <label>Name:</label>
@@ -46,10 +45,9 @@
       
       <button type="submit" " class="btn btn-primary">Post!</button>
     </form>
-    
-    {{#each messages}}
-      <p><strong>{{name}}</strong>: {{message}}</p>
-    {{/each}}
-  </template>
-</div>
->>>>>>> dd53971e1a8704ededda17fc6227f02e81e4fb75
+  
+  {{#each messages}}
+    <p><strong>{{name}}</strong>: {{message}}</p>
+  {{/each}}
+  </div>
+</template>
