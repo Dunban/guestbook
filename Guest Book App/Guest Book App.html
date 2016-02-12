@@ -39,7 +39,7 @@
       </form>
       
       {{#each messages}}
-        <p><a href="{{pathFor route='message.show'}}"><strong>{{name}}</strong></a>: {{message}}</p>
+        <p><a href="{{pathFor route='message.show'}}"><strong>{{username}</strong></a>: {{message}}</p>
       {{/each}}
     {{/if}}
 </template>

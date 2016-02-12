@@ -48,15 +48,13 @@ if (Meteor.isClient)
       {
         event.preventDefault();
         var messbox = $(event.target).find('textarea[name=message]');
-        var namebox = $(event.target).find('input[name=name]');
         
-        var nametext = namebox.val();
         var messtext = messbox.val();
         
         Messages.insert
         (
           {
-            name: nametext,
+            username: user.name,
             message: messtext,
             submitted: Date.now()
           }
