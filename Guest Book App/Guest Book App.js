@@ -68,6 +68,11 @@ if (Meteor.isClient)
       }
     }
   );
+  
+  Accounts.ui.config
+  ({
+    passwordSignupFields: "USERNAME_AND_EMAIL"
+  })
 }
 
 if (Meteor.isServer)
@@ -76,4 +81,18 @@ if (Meteor.isServer)
   {
     return Messages.find();
   })
+  
+  Accounts.onCreateUser(function (options, user)
+  {
+    if (options.profile)
+    {
+      user.profile = options.profile;
+    }
+    else
+    {
+      user.profile = {};
+    }
+    
+    return user;
+  });
 }
