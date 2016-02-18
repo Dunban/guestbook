@@ -50,11 +50,12 @@ if (Meteor.isClient)
         var messbox = $(event.target).find('textarea[name=message]');
         
         var messtext = messbox.val();
+        var user = Meteor.user();
         
         Messages.insert
         (
           {
-            username: user.name,
+            name: user.username,
             message: messtext,
             submitted: Date.now()
           }
